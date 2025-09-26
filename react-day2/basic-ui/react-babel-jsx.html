@@ -8,67 +8,54 @@
   </head>
   <body>
     <h1>I am a super heading</h1>
-    <div id="root">
-      <h2>Hello, I am child of Root</h2>
-    </div>
+    <div id="root"></div>
     <h1>I am a super footer</h1>
+
     <script src="./react-lib/react.development.js"></script>
     <script src="./react-lib/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <script type="text/babel">
-      const nestedElement = (
-        <div id="root">
-          <div id="parent">
-            <div id="child1">
-              <h1 style={{ color: "blue" }}>Hi, I'm Bob the Builder!</h1>
-              <h2>I can fix it!</h2>
-            </div>
-            <div id="child2">
-              <h1 style={{ color: "orange" }}>Hi, I'm Dora the Explorer!</h1>
-              <h2>Let's go exploring!</h2>
-            </div>
-          </div>
-        </div>
-      );
-
-      const NestedFunction = () => (
-        <div id="root">
-          <div id="parent">
-            <div id="child1">
-              <h1 style={{ color: "blue" }}>Hi, I'm Bob the Builder!</h1>
-              <h2>I can fix it!</h2>
-            </div>
-            <div id="child2">
-              <h1 style={{ color: "orange" }}>Hi, I'm Dora the Explorer!</h1>
-              <h2>Let's go exploring!</h2>
-            </div>
-          </div>
-        </div>
-      );
-
       function PlainFunction() {
         return (
-          <div id="root">
-            <div id="parent">
-              <div id="child1">
-                <h1 style={{ color: "blue" }}>Hi, I'm Bob the Builder!</h1>
-                <h2>I can fix it!</h2>
-              </div>
-              <div id="child2">
-                <h1 style={{ color: "orange" }}>Hi, I'm Dora the Explorer!</h1>
-                <h2>Let's go exploring!</h2>
-              </div>
-              <div id="child3">
-                <h1 style={{ color: "orange" }}>Hi, I've Explored all!</h1>
-                <h2>Explored!</h2>
-              </div>
+          <div id="parent">
+            <div id="child1">
+              <h1 style={{ color: "blue" }}>Hi, I'm Bob the Builder!</h1>
+              <h2>I can fix it!</h2>
+            </div>
+            <div id="child2">
+              <h1 style={{ color: "orange" }}>Hi, I'm Dora the Explorer!</h1>
+              <h2>Let's go exploring!</h2>
+            </div>
+            <div id="child3">
+              <h1 style={{ color: "green" }}>Hi, I've Explored all!</h1>
+              <h2>Explored!</h2>
             </div>
           </div>
         );
       }
 
+      // ✅ New component
+      function Footer() {
+        return (
+          <footer style={{ marginTop: "20px", color: "purple" }}>
+            <h3>👋 Added new component!</h3>
+          </footer>
+        );
+      }
+
+      // ✅ Combine components
+      function App() {
+        return (
+          <div>
+            <PlainFunction />
+            <Footer />
+          </div>
+        );
+      }
+
       const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(<PlainFunction />);
+      root.render(<App />);
     </script>
   </body>
 </html>
