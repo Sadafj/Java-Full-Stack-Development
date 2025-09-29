@@ -32,7 +32,21 @@
           ),
           React.createElement("h2", {}, "Let's go exploring!"),
         ]),
+        React.createElement("div", { id: "child3" }, [
+          React.createElement(
+            "h1",
+            { style: { color: "green" } },
+            "Hi, I've Explored all!"
+          ),
+          React.createElement("h2", {}, "Explored!"),
+        ]),
+        React.createElement(
+          "footer",
+          { style: { marginTop: "20px", color: "purple" } },
+          React.createElement("h3", {}, "👋 Added new component!")
+        ),
       ]);
+      
 
       const root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(nestedElement);
