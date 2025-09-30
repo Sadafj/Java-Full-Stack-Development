@@ -44,6 +44,13 @@ export default function Array() {
       image: "https://via.placeholder.com/200x150?text=Laptop",
       description: "Powerful performance for gaming & work.",
     },
+    {
+      id: 4,
+      name: "Laptop",
+      price: 500000,
+      image: "https://via.placeholder.com/200x150?text=Laptop",
+      description: "Powerful performance for gaming & work.",
+    },
   ];
 
   return (
