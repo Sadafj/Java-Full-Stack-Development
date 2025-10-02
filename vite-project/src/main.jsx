@@ -6,6 +6,8 @@ import Array from './Array.jsx'
 import LifecycleClassComponent from './LifecycleClassComponent.jsx'
 import DataComponent from './DataComponent.jsx'
 import { Suspense } from 'react'
+import TablePrint from './TablePrint.jsx'
+import TableLimit from './TableLimit.jsx'
 
 
 
@@ -15,5 +17,7 @@ createRoot(document.getElementById('root')).render(
     <Array />
     <LifecycleClassComponent />
     <DataComponent />
+    <TablePrint />
+    <TableLimit />
   </StrictMode>,
 )
